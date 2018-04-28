@@ -16,9 +16,13 @@ LED1 = 14
 LED2 = 15
 LED3 = 18
 
+proxies = {
+    'https': '115.249.2.192:8080'
+}
+
 def get_last_update():
     url = URL + 'getUpdates?offset=-1'
-    r = requests.get(url)
+    r = requests.get(url, proxies=proxies)
 
     if len(r.json()['result']) == 0:
         return None
@@ -44,7 +48,7 @@ def send_message(chat_id, text):
         }
     }
 
-    requests.get(url, json=data)
+    requests.get(url, json=data, proxies=proxies)
 
 
 def main():
