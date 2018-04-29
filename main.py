@@ -7,9 +7,9 @@ import json
 import RPi.GPIO as GPIO
 from datetime import datetime
 
-URL = 'https://api.telegram.org/botYOUR_TOKEN/' # Replace YOUR_TOKEN on the token of your bot
+URL = 'https://api.telegram.org/botYOUR_TOKEN/' # Replace YOUR_TOKEN with the token of your bot
 
-YOUR_TELEGRAM_ID = 159619537 # Change on your Telegram id
+YOUR_TELEGRAM_ID = 159619537 # Change to your Telegram id
 
 # pin numbers
 LED1 = 14
